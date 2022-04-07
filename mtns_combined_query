@@ -1,0 +1,107 @@
+
+
+CREATE TABLE Mtns_Combined (
+    Date date,
+    Name varchar(255),
+	Nationality varchar(255),
+    Cause_of_Death varchar(255)
+);
+
+ALTER TABLE Mtns_Combined 
+ADD Mountain varchar(255);
+
+ALTER TABLE annapurna1
+ADD Mountain varchar(255);
+
+
+ALTER TABLE broad_peak
+ADD Mountain varchar(255);
+ALTER TABLE cho_oyu
+ADD Mountain varchar(255);
+ALTER TABLE dhaulagiri1
+ADD Mountain varchar(255);
+ALTER TABLE everest
+ADD Mountain varchar(255);
+ALTER TABLE gasherbrum1
+ADD Mountain varchar(255);
+ALTER TABLE gasherbrum2
+ADD Mountain varchar(255);
+ALTER TABLE k2
+ADD Mountain varchar(255);
+ALTER TABLE lhotse
+ADD Mountain varchar(255);
+ALTER TABLE makalu
+ADD Mountain varchar(255);
+ALTER TABLE manaslu
+ADD Mountain varchar(255);
+ALTER TABLE nanga_parbat
+ADD Mountain varchar(255);
+ALTER TABLE shishapangma
+ADD Mountain varchar(255);
+
+UPDATE annapurna1 SET Mountain = 'annapurna1';
+
+UPDATE broad_peak SET Mountain = 'broad_peak';
+UPDATE cho_oyu SET Mountain = 'cho_oyu';
+UPDATE dhaulagiri1 SET Mountain = 'dhaulagiri1';
+UPDATE everest SET Mountain = 'everest';
+UPDATE gasherbrum1 SET Mountain = 'gasherbrum1';
+UPDATE gasherbrum2 SET Mountain = 'gasherbrum2';
+UPDATE k2 SET Mountain = 'k2';
+UPDATE lhotse SET Mountain = 'lhotse';
+UPDATE makalu SET Mountain = 'makalu';
+UPDATE manaslu SET Mountain = 'manaslu';
+UPDATE nanga_parbat SET Mountain = 'nanga_parbat';
+UPDATE shishapangma SET Mountain = 'shishapangma';
+
+
+SELECT * FROM mtns_combined
+
+UNION ALL	
+SELECT * FROM cho_oyu
+
+UNION ALL
+SELECT * FROM annapurna1
+
+UNION ALL
+SELECT * FROM broad_peak
+
+UNION ALL
+SELECT * FROM dhaulagiri1
+
+UNION ALL
+SELECT * FROM everest
+
+
+UNION ALL
+SELECT * FROM gasherbrum1
+
+
+UNION ALL
+SELECT * FROM gasherbrum2
+
+
+UNION ALL
+SELECT * FROM k2
+
+
+UNION ALL
+SELECT * FROM lhotse
+
+
+UNION ALL
+SELECT * FROM makalu
+
+
+UNION ALL
+SELECT * FROM manaslu
+
+
+UNION ALL
+SELECT * FROM nanga_parbat
+
+
+UNION ALL
+SELECT * FROM shishapangma;
+
+ORDER BY date;
