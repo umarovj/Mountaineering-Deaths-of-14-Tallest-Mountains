@@ -1,0 +1,81 @@
+-- Table: public.mtns_combined
+
+-- DROP TABLE public.mtns_combined;
+
+CREATE TABLE IF NOT EXISTS public.mtns_combined
+(
+    date date,
+    name character varying(255) COLLATE pg_catalog."default",
+    nationality character varying(255) COLLATE pg_catalog."default",
+    cause_of_death character varying(255) COLLATE pg_catalog."default",
+    mountain character varying(255) COLLATE pg_catalog."default"
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.mtns_combined
+    OWNER to postgres;
+	
+	
+CREATE TABLE Mtns (
+    Date date,
+    Name varchar(255),
+	Nationality varchar(255),
+    Cause_of_Death varchar(255),
+	Mountain varchar(255)
+);
+
+SELECT * FROM public.Mtns
+
+UNION ALL	
+SELECT * FROM cho_oyu
+
+UNION ALL
+SELECT * FROM annapurna1
+
+UNION ALL
+SELECT * FROM broad_peak
+
+UNION ALL
+SELECT * FROM dhaulagiri1
+
+UNION ALL
+SELECT * FROM everest
+
+
+UNION ALL
+SELECT * FROM gasherbrum1
+
+
+UNION ALL
+SELECT * FROM gasherbrum2
+
+
+UNION ALL
+SELECT * FROM k2
+
+
+UNION ALL
+SELECT * FROM lhotse
+
+
+UNION ALL
+SELECT * FROM makalu
+
+
+UNION ALL
+SELECT * FROM manaslu
+
+
+UNION ALL
+SELECT * FROM nanga_parbat
+
+
+UNION ALL
+SELECT * FROM shishapangma
+ORDER BY date;
+
+SELECT * FROM public.Mtns;
+
